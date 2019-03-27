@@ -6,7 +6,7 @@
 // Program Name: Friday Sales Calculator
 // Purpose: Design a program including an array to return total Friday sales for a given month
 
-//Author: Fatima Abdullah, Austin Decker, Alexis Currie
+//Author: Fatima Abdullah
 
 //Define variables and constants
 var collectiveSales = 0;
