@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<script type="text/javascript">
+
+// Program Name: Friday Sales Calculator
+// Purpose: Design a program including an array to return total Friday sales for a given month
+
+//Author: Fatima Abdullah, Austin Decker, Alexis Currie
+
+//Define variables and constants
+var collectiveSales = 0;
+var index;
+var weeklyFridaySales; // amount of sales made per week
+var SIZE;
+var PA = "<p/ >";  // paragraph break
+
+var ES = " ";     // empty space
+
+var BR = "<br>";  // HTML page break 
+var salesResults; //gives total results for sales 
+
+// welcome user to the program
+document.write("Welcome to the Friday Sales Calculator!"+BR);
+
+// start function to take in number of Friday's in a month, and weekly Friday Sales
+
+function totalFridaySales(weeklyFridaySales,SIZE)
+
+{
+
+collectiveSales;
+
+for (index = 0; 
+	index < SIZE; 
+		  index++)
+{
+collectiveSales = collectiveSales + weeklyFridaySales[index];
+}
+return collectiveSales;
+}
+
+</script>
+
+</head>
+
+<h1><center>******Friday Sales Calculator******</center></h1>
+
+</head>
+<body>
+
+<script type="text/javascript">
+//body includes function and a while loop to redirect user if they enter a month with < 3 or >5 Friday's per month
+
+	while (true){
+	  SIZE = parseInt(prompt("How many Friday sales are you accounting for this month?" + ES));
+	  weeklyFridaySales= new Array(SIZE);
+	  if(SIZE < 3 || 
+			SIZE > 5){
+            alert("A month may only consist of 3-5 Friday's, please make a valid selection!");
+
+				}
+					else
+				  {
+  		for (index = 0; 
+			index < SIZE; 
+				index++)
+  					{
+       		 weeklyFridaySales[index] = parseFloat(prompt("Enter the amount of sales in $00.00 format:" + ES));
+
+			if (weeklyFridaySales ==""){
+				alert("please do not enter null values ");
+
+					}
+				}
+
+salesResults= totalFridaySales(weeklyFridaySales, SIZE);
+
+break;
+	
+}
+}
+
+// display the results
+document.write("Collective Friday sales for this store this month were $", salesResults.toFixed(2)+BR);
+
+// thank user for using the program
+document.write("Thank you for using our Friday Sales calculator!"+BR);
+
+</script>
+</head>
+</html>
